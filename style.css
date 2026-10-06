@@ -1,4 +1,4 @@
-/* Estilos generales */
+/* Estilos generales - Fusión Marrón/Beige & Verde Esmeralda */
 * {
     margin: 0;
     padding: 0;
@@ -8,8 +8,8 @@
 }
 
 body {
-    background-color: #0f172a;
-    color: #f8fafc;
+    background-color: #1a1614; /* Fondo marrón café muy profundo y elegante */
+    color: #ede0d4;            /* Texto principal en beige claro suave */
     line-height: 1.6;
 }
 
@@ -19,64 +19,78 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 5%;
-    background-color: #1e293b;
+    background-color: #26201e; /* Tono marrón cálido para la barra */
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid #334155;
+    border-bottom: 1px solid #3d322e;
 }
 
 .logo {
     font-weight: bold;
     font-size: 1.2rem;
-    color: #38bdf8;
+    color: #34d399; /* Verde esmeralda tecnológico para destacar */
 }
 
 nav a {
-    color: #cbd5e1;
+    color: #b0a499;
     text-decoration: none;
     margin-left: 1.5rem;
     transition: color 0.3s;
+    font-size: 0.95rem;
 }
 
 nav a:hover {
-    color: #38bdf8;
+    color: #34d399;
 }
 
 /* Sección Hero */
 .hero {
     text-align: center;
     padding: 6rem 1rem;
+    background-color: #1a1614;
 }
 
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: #fdf0d5;
 }
 
 .highlight {
-    color: #38bdf8;
+    color: #34d399; /* Toque verde esmeralda magistral */
 }
 
 .hero p {
     font-size: 1.2rem;
-    color: #94a3b8;
+    color: #c5b9ac; /* Beige oscuro / arena */
     margin-bottom: 2rem;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* NUEVA SECCIÓN: Skills */
-.skills-section {
-    padding: 4rem 5%;
-    background-color: #0f172a;
-    text-align: center;
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
 }
 
-.skills-section h2 {
+/* Secciones genéricas */
+section {
+    padding: 4rem 5%;
+}
+
+h2 {
+    text-align: center;
     margin-bottom: 2.5rem;
     font-size: 2rem;
+    color: #fdf0d5;
+}
+
+/* Skills */
+.skills-section {
+    background-color: #211c19; /* Sutil contraste de marrón */
 }
 
 .skills-container {
@@ -88,15 +102,14 @@ nav a:hover {
 }
 
 .skill-category {
-    background-color: #1e293b;
+    background-color: #26201e;
     padding: 2rem;
     border-radius: 10px;
-    border: 1px solid #334155;
-    text-align: left;
+    border: 1px solid #3d322e;
 }
 
 .skill-category h3 {
-    color: #38bdf8;
+    color: #34d399; /* Verde esmeralda para títulos de categorías */
     margin-bottom: 1.2rem;
     font-size: 1.2rem;
 }
@@ -108,18 +121,130 @@ nav a:hover {
 }
 
 .skill-tags span {
-    background-color: #0f172a;
-    color: #e2e8f0;
+    background-color: #1a1614;
+    color: #ede0d4;
     padding: 0.4rem 0.8rem;
     border-radius: 6px;
     font-size: 0.85rem;
-    border: 1px solid #334155;
+    border: 1px solid #3d322e;
+}
+
+/* Experiencia */
+.experience-section {
+    background-color: #1a1614;
+}
+
+.experience-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.experience-card {
+    background-color: #26201e;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #3d322e;
+}
+
+.experience-card h3 {
+    color: #34d399;
+    margin-bottom: 0.25rem;
+}
+
+.experience-card .date {
+    font-size: 0.85rem;
+    color: #9c8e82; /* Tono marrón grisáceo elegante */
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.experience-card p {
+    color: #c5b9ac;
+}
+
+/* Proyectos */
+.projects {
+    background-color: #211c19;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #26201e;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #3d322e;
+    transition: transform 0.3s, border-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #34d399; /* El borde se ilumina en verde al pasar el ratón */
+}
+
+.project-card h3 {
+    color: #fdf0d5;
+    margin-bottom: 0.75rem;
+}
+
+.project-card p {
+    color: #c5b9ac;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* Educación */
+.education-section {
+    background-color: #1a1614;
+}
+
+.education-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.education-card {
+    background-color: #26201e;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #3d322e;
+}
+
+.education-card h3 {
+    color: #34d399;
+    margin-bottom: 0.25rem;
+}
+
+.education-card .date {
+    font-size: 0.85rem;
+    color: #9c8e82;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.education-card p {
+    color: #c5b9ac;
 }
 
 /* Botones */
 .btn {
-    background-color: #38bdf8;
-    color: #0f172a;
+    background-color: #34d399; /* Botón principal en verde esmeralda vibrante */
+    color: #1a1614;
     padding: 0.75rem 1.5rem;
     border-radius: 6px;
     text-decoration: none;
@@ -129,53 +254,27 @@ nav a:hover {
 }
 
 .btn:hover {
-    background-color: #0ea5e9;
+    background-color: #10b981; /* Verde un poco más intenso */
 }
 
-/* Proyectos */
-.projects {
-    padding: 4rem 5%;
-    background-color: #1e293b;
+.btn-secondary {
+    background-color: transparent;
+    color: #fdf0d5;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #4a3c37;
+    transition: background 0.3s, border-color 0.3s;
 }
 
-.projects h2 {
-    text-align: center;
-    margin-bottom: 2.5rem;
-    font-size: 2rem;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.project-card {
-    background-color: #0f172a;
-    padding: 2rem;
-    border-radius: 10px;
-    border: 1px solid #334155;
-    transition: transform 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-.project-card h3 {
-    margin-bottom: 0.75rem;
-}
-
-.project-card p {
-    color: #94a3b8;
-    margin-bottom: 1.5rem;
-    font-size: 0.95rem;
+.btn-secondary:hover {
+    background-color: #26201e;
+    border-color: #34d399;
 }
 
 .btn-small {
-    color: #38bdf8;
+    color: #34d399;
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 600;
@@ -189,15 +288,23 @@ nav a:hover {
 footer {
     text-align: center;
     padding: 3rem 1rem;
-    background-color: #0f172a;
-    border-top: 1px solid #334155;
+    background-color: #211c19;
+    border-top: 1px solid #3d322e;
 }
 
 footer p {
-    color: #94a3b8;
+    color: #c5b9ac;
     margin-top: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 footer a {
-    color: #38bdf8;
+    color: #34d399;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
 }
