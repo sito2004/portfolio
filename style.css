@@ -307,4 +307,120 @@ footer a {
     justify-content: center;
     gap: 1.5rem;
     margin-top: 1rem;
+}/* --- ANIMACIONES Y EFECTOS VISUALES AVANZADOS --- */
+
+/* 1. Animación de entrada inicial para la cabecera */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    animation: slideDown 0.6s ease-out;
+}
+
+/* 2. Animación de aparición suave y escalonada para las secciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 3. Animación de flotación sutil para el título principal (Hero) */
+@keyframes floatText {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+.hero h1 span.highlight {
+    display: inline-block;
+    animation: floatText 4s ease-in-out infinite;
+}
+
+/* 4. Efecto hover interactivo y con profundidad en tarjetas */
+.project-card, .experience-card, .skill-category {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.project-card:hover, .experience-card:hover, .skill-category:hover {
+    transform: translateY(-10px) scale(1.02); /* Se eleva y agranda ligeramente */
+    box-shadow: 0 15px 30px rgba(52, 211, 153, 0.18); /* Halo verde esmeralda brillante */
+    border-color: #34d399;
+}
+
+/* 5. Efecto de pulso suave en el botón principal para captar la atención */
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 12px rgba(52, 211, 153, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(52, 211, 153, 0);
+    }
+}
+
+.btn {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: pulseGlow 3s infinite;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    background-color: #10b981;
+    animation: none; /* Detiene el pulso al hacer hover para centrar el brillo */
+    box-shadow: 0 0 20px rgba(52, 211, 153, 0.6);
+}
+
+/* 6. Animación interactiva para las etiquetas de habilidades (tags) */
+.skill-tags span {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.skill-tags span:hover {
+    transform: translateY(-4px) scale(1.05);
+    background-color: #34d399;
+    color: #1a1614;
+    border-color: #34d399;
+    box-shadow: 0 4px 12px rgba(52, 211, 153, 0.3);
+}
+
+/* 7. Subrayado animado fluido en el menú de navegación */
+nav a {
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #34d399;
+    transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+nav a:hover::after {
+    width: 100%;
 }
